@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class WordLengthCount {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a sentence: ");
+        String str = sc.nextLine();
+        String[] words = str.split(" ");
+
+        int[] lengthCount = new int[100]; // assuming max word length 100
+        for (String word : words) {
+            lengthCount[word.length()]++;
+        }
+
+        System.out.println("Word length counts:");
+        for (int i = 1; i < lengthCount.length; i++) {
+            if (lengthCount[i] > 0) {
+                System.out.println("Length " + i + ": " + lengthCount[i]);
+            }
+        }
+    }
+}
