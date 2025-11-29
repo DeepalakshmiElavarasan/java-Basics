@@ -1,0 +1,13 @@
+class MoveZeros {
+    public static void main(String[] args) {
+        int[] arr = {0, 3, 0, 5, 1};
+        int index = 0;
+
+        for (int num : arr) {
+            if (num != 0) arr[index++] = num;
+        }
+        while (index < arr.length) arr[index++] = 0;
+
+        for (int n : arr) System.out.print(n + " ");
+    }
+}
