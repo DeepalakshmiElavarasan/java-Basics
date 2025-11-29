@@ -1,0 +1,13 @@
+class CountOccurrence {
+    public static void main(String[] args) {
+        int[] arr = {3, 5, 3, 2, 3, 8};
+        int x = 3;
+        int count = 0;
+
+        for (int num : arr) {
+            if (num == x) count++;
+        }
+
+        System.out.println(x + " appears " + count + " times");
+    }
+}
