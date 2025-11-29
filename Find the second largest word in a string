@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class SecondLargestWord {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a sentence: ");
+        String str = sc.nextLine();
+        String[] words = str.split(" ");
+
+        String largest = "", secondLargest = "";
+        for (String word : words) {
+            if (word.length() > largest.length()) {
+                secondLargest = largest;
+                largest = word;
+            } else if (word.length() > secondLargest.length() && !word.equals(largest)) {
+                secondLargest = word;
+            }
+        }
+
+        System.out.println("Second largest word: " + secondLargest);
+    }
+}
