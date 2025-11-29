@@ -1,0 +1,11 @@
+class SwapEnds {
+    public static void main(String[] args) {
+        int[] arr = {2, 4, 6, 8};
+
+        int temp = arr[0];
+        arr[0] = arr[arr.length - 1];
+        arr[arr.length - 1] = temp;
+
+        for (int n : arr) System.out.print(n + " ");
+    }
+}
