@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class ToLowercase {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+        char[] chars = str.toCharArray();
+
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] >= 'A' && chars[i] <= 'Z') {
+                chars[i] = (char)(chars[i] - 'A' + 'a');
+            }
+        }
+
+        System.out.println("Lowercase string: " + new String(chars));
+    }
+}
