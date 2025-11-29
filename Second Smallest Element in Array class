@@ -1,0 +1,18 @@
+class SecondSmallest {
+    public static void main(String[] args) {
+        int[] arr = {4, 1, 7, 3, 2};
+        int small = Integer.MAX_VALUE;
+        int secondSmall = Integer.MAX_VALUE;
+
+        for (int num : arr) {
+            if (num < small) {
+                secondSmall = small;
+                small = num;
+            } else if (num < secondSmall && num != small) {
+                secondSmall = num;
+            }
+        }
+
+        System.out.println("Second smallest = " + secondSmall);
+    }
+}
