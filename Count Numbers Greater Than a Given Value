@@ -1,0 +1,13 @@
+class GreaterThanX {
+    public static void main(String[] args) {
+        int[] arr = {4, 7, 1, 9, 3};
+        int x = 4;
+        int count = 0;
+
+        for (int num : arr) {
+            if (num > x) count++;
+        }
+
+        System.out.println("Count: " + count);
+    }
+}
