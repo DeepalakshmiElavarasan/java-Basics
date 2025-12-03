@@ -1,0 +1,63 @@
+//Without Override
+
+public class equ {
+	
+	int bid;
+	double price;
+	
+	public equ() {}
+	
+	public equ(int bid,double price) {
+		super();
+	}
+	
+	
+	
+	
+	public static void main(String[]args) {
+		equ b1 =new equ(1,100);
+		equ b2 =new equ(1,100);
+		System.out.println(b1.equals(b2));
+	}
+	
+
+}
+//With Override
+public class Product {
+	
+		int pid;
+		double price;
+		
+		public Product(int pid, double price) {
+			super();
+			this.pid = pid;
+			this.price = price;
+		}
+		
+		@Override
+		public boolean equals(Object r)
+		{
+			Product p=(Product)r;
+			if(this.pid==p.pid && this.price==p.price)
+			   return true;
+			return false;
+					
+		}
+		
+		public static void main(String[]args)
+		{
+			Product r1=new Product(1,100);
+			Product r2=new Product(1,200);
+			Product r3=new Product(1,100);
+			System.out.println(r1.equals(r3));
+			System.out.println(r1.equals(r2));
+		}
+
+	}
+
+	
+
+
+
+
+
