@@ -1,0 +1,43 @@
+//without overriding
+public class Marker
+{
+	String color="Black";
+	public Marker()
+	{
+		super();
+	}
+	
+	public static void main(String[]arga)
+	{
+		Marker ref=new Marker();
+		System.out.println(ref);
+		System.out.println(ref.toString());
+	}
+}
+
+
+
+//with Overriding
+public class Person {
+String name;
+int age;
+public Person(String name, int age) {
+	this.name = name;
+	this.age = age;
+}
+
+@Override
+
+public String toString() {
+	return name+":"+age;
+	
+}
+
+public static void main(String[]args) {
+	Object ref=new Person("Hari",18);
+	
+	System.out.println(ref);
+}
+}
+
+    
